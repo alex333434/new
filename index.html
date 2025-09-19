@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contaminación en Congata, Arequipa - Crisis Global de Residuos</title>
+    <meta name="description" content="Análisis de la crisis de contaminación por residuos sólidos en Congata, Arequipa, Perú, en el contexto global.">
+    <meta name="keywords" content="contaminación, Arequipa, Congata, residuos sólidos, medio ambiente, Perú">
+    <meta name="author" content="Environmental Data Project">
+    
+    <!-- Open Graph Meta Tags para compartir en redes sociales -->
+    <meta property="og:title" content="Crisis de Contaminación en Congata, Arequipa">
+    <meta property="og:description" content="Análisis completo de la problemática ambiental local y global">
+    <meta property="og:type" content="website">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 45px rgba(0,0,0,0.3);
+        }
+
+        .card h2 {
+            color: #e74c3c;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card h3 {
+            color: #2980b9;
+            font-size: 1.4rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(238, 90, 36, 0.3);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .world-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .world-stat {
+            background: linear-gradient(135deg, #4ecdc4, #44a08d);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(78, 205, 196, 0.3);
+        }
+
+        .problem-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .problem-list li {
+            background: #ecf0f1;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 10px;
+            border-left: 5px solid #e74c3c;
+            transition: all 0.3s ease;
+        }
+
+        .problem-list li:hover {
+            background: #d5dbdb;
+            transform: translateX(10px);
+        }
+
+        .solutions {
+            background: linear-gradient(135deg, #56ab2f, #a8e6cf);
+            color: white;
+            padding: 2rem;
+            border-radius: 20px;
+            margin-top: 2rem;
+            box-shadow: 0 15px 35px rgba(86, 171, 47, 0.3);
+        }
+
+        .solutions h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .solution-item {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1rem;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+        }
+
+        .alert {
+            background: linear-gradient(135deg, #ff7979, #eb4d4b);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(255, 121, 121, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 Crisis de Contaminación en Congata, Arequipa</h1>
+            <p class="subtitle">Un análisis de la problemática local en el contexto global de residuos sólidos</p>
+        </header>
+
+        <div class="alert">
+            <strong>⚠️ ALERTA AMBIENTAL:</strong> La contaminación por residuos sólidos representa una crisis urgente que requiere acción inmediata
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>
+                    <span class="icon">📍</span>
+                    Situación en Arequipa
+                </h2>
+                
+                <div class="stat-box">
+                    <span class="stat-number">482.78</span>
+                    Toneladas de basura diarias en la ciudad de Arequipa
+                </div>
+
+                <h3>Problemas Identificados en la Región:</h3>
+                <ul class="problem-list">
+                    <li><strong>Contaminación del aire:</strong> 145 µg/m³ de partículas PM2.5 (3 veces el límite de la OMS)</li>
+                    <li><strong>Residuos orgánicos:</strong> 60% de la basura podría ser reciclada</li>
+                    <li><strong>Contaminación hídrica:</strong> Río Tambo afectado por residuos mineros</li>
+                    <li><strong>Residuos pesqueros:</strong> Problema en puertos de Arequipa</li>
+                    <li><strong>Botaderos ilegales:</strong> Como "El Cebollar" en Paucarpata</li>
+                </ul>
+
+                <div class="stat-box">
+                    <span class="stat-number">120</span>
+                    Toneladas de residuos recogidos en puertos (2018-2025)
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>
+                    <span class="icon">🌎</span>
+                    Crisis Mundial de Residuos
+                </h2>
+
+                <div class="world-stats">
+                    <div class="world-stat">
+                        <span class="stat-number">48.29 mil</span>
+                        <div>millones de toneladas recolectadas anualmente</div>
+                    </div>
+                    <div class="world-stat">
+                        <span class="stat-number">2.1</span>
+                        <div>millones de toneladas en 2023</div>
+                    </div>
+                    <div class="world-stat">
+                        <span class="stat-number">3.8</span>
+                        <div>millones proyectadas para 2050</div>
+                    </div>
+                    <div class="world-stat">
+                        <span class="stat-number">89.05%</span>
+                        <div>Aumento esperado hacia 2050</div>
+                    </div>
+                </div>
+
+                <h3>Impacto Global:</h3>
+                <ul class="problem-list">
+                    <li><strong>Emisiones GEI:</strong> 5% de las emisiones mundiales provienen de residuos orgánicos</li>
+                    <li><strong>Costo económico:</strong> $252,000 millones USD anuales en gestión de residuos</li>
+                    <li><strong>Costo oculto:</strong> Podría superar $600,000 millones USD en 2050</li>
+                    <li><strong>Países vulnerables:</strong> 90% de residuos se queman al aire libre en países de bajos ingresos</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>
+                    <span class="icon">🏘️</span>
+                    Impacto en Congata
+                </h2>
+                
+                <h3>Problemas Específicos del Distrito:</h3>
+                <ul class="problem-list">
+                    <li>Gestión inadecuada de residuos domiciliarios</li>
+                    <li>Falta de infraestructura de recolección</li>
+                    <li>Contaminación de espacios públicos</li>
+                    <li>Riesgos para la salud pública</li>
+                    <li>Impacto en la calidad de vida</li>
+                </ul>
+
+                <div class="stat-box">
+                    <span class="stat-number">Alta</span>
+                    Vulnerabilidad ambiental del distrito
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>
+                    <span class="icon">📊</span>
+                    Comparación Regional
+                </h2>
+
+                <h3>Generación per cápita estimada:</h3>
+                <div class="world-stats">
+                    <div class="world-stat">
+                        <span class="stat-number">0.5-0.8</span>
+                        <div>kg/día por persona en Perú</div>
+                    </div>
+                    <div class="world-stat">
+                        <span class="stat-number">1.2</span>
+                        <div>kg/día promedio mundial</div>
+                    </div>
+                </div>
+
+                <p style="margin-top: 1rem; font-style: italic;">
+                    Aunque Perú genera menos residuos per cápita que el promedio mundial, 
+                    la falta de gestión adecuada multiplica el impacto ambiental.
+                </p>
+            </div>
+        </div>
+
+        <div class="solutions">
+            <h2>🌱 Soluciones Propuestas</h2>
+            <div class="solutions-grid">
+                <div class="solution-item">
+                    <h3>🗂️ Gestión Municipal</h3>
+                    <p>Mejorar sistemas de recolección y tratamiento de residuos en Congata</p>
+                </div>
+                <div class="solution-item">
+                    <h3>♻️ Reciclaje</h3>
+                    <p>Implementar programas de separación en origen y reciclaje comunitario</p>
+                </div>
+                <div class="solution-item">
+                    <h3>🏫 Educación</h3>
+                    <p>Campañas de sensibilización sobre manejo responsable de residuos</p>
+                </div>
+                <div class="solution-item">
+                    <h3>🤝 Participación</h3>
+                    <p>Involucrar a la comunidad en programas de limpieza y cuidado ambiental</p>
+                </div>
+                <div class="solution-item">
+                    <h3>💰 Inversión</h3>
+                    <p>Destinar recursos para infraestructura de gestión de residuos</p>
+                </div>
+                <div class="solution-item">
+                    <h3>📋 Regulación</h3>
+                    <p>Fortalecer normativas y fiscalización ambiental</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>💚 La solución está en nuestras manos. Cada acción cuenta para proteger nuestro entorno.</p>
+            <p><small>Datos basados en fuentes del PNUMA, Banco Mundial y autoridades locales - 2024</small></p>
+        </footer>
+    </div>
+
+    <script>
+        // Animación suave al hacer scroll
+        window.addEventListener('scroll', () => {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        // Inicializar animaciones
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(50px)';
+                card.style.transition = 'all 0.6s ease';
+                
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+</html>
